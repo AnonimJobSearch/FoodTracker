@@ -9,7 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // MARK: Properties
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var mealNameLabel: UILabel!
+    
+    
+    // MARK: Actions
+    
+    @IBAction func setDefaultText(sender: UIButton) {
+        mealNameLabel.text = "Default Text"
+    }
+    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
