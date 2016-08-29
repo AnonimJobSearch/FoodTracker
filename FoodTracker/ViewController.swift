@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: Properties
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
     // MARK: Actions
@@ -23,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldDidEndEditing(textField: UITextField) {
         mealNameLabel.text = textField.text
+        textField.text = ""
     }
     
     override func viewDidLoad() {

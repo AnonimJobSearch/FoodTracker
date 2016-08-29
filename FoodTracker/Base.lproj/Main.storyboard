@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -41,6 +42,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qdx-X4-gcC">
+                                <rect key="frame" x="20" y="153" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qdx-X4-gcC" secondAttribute="height" multiplier="1:1" id="qDi-f3-PLl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,6 +59,7 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="nmC-37-7QC" id="Nwe-F7-eJ1"/>
                         <outlet property="nameTextField" destination="6vG-Pn-rYs" id="eSh-Yp-BPQ"/>
+                        <outlet property="photoImageView" destination="Qdx-X4-gcC" id="Dte-C7-Os9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,4 +67,7 @@
             <point key="canvasLocation" x="308" y="218"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="360" height="360"/>
+    </resources>
 </document>
