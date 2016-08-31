@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-DA-Mgy">
-                                <rect key="frame" x="20" y="40" width="560" height="437"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-DA-Mgy">
+                                <rect key="frame" x="20" y="40" width="560" height="487"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-37-7QC">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
@@ -40,11 +40,11 @@
                                             <action selector="setDefaultText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Quq-Yz-9gb"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t36-dM-QJD">
-                                        <rect key="frame" x="0.0" y="117" width="560" height="320"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="t36-dM-QJD">
+                                        <rect key="frame" x="0.0" y="117" width="560" height="370"/>
                                         <subviews>
                                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qdx-X4-gcC">
-                                                <rect key="frame" x="120" y="0.0" width="320" height="320"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qdx-X4-gcC" secondAttribute="height" multiplier="1:1" id="qDi-f3-PLl"/>
@@ -53,6 +53,10 @@
                                                     <outletCollection property="gestureRecognizers" destination="sVq-fT-H20" appends="YES" id="ai1-qW-Jax"/>
                                                 </connections>
                                             </imageView>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZ6-qF-IMv" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="320" width="240" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
