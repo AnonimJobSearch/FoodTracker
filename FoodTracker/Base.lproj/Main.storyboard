@@ -35,7 +35,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaK-g9-cEF">
                                         <rect key="frame" x="0.0" y="75" width="560" height="30"/>
-                                        <state key="normal" title="Set Default Label Text"/>
+                                        <state key="normal" title="Set Label Text"/>
                                         <connections>
                                             <action selector="setDefaultText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Quq-Yz-9gb"/>
                                         </connections>
@@ -43,7 +43,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t36-dM-QJD">
                                         <rect key="frame" x="0.0" y="117" width="560" height="377"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qdx-X4-gcC">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qdx-X4-gcC">
                                                 <rect key="frame" x="120" y="0.0" width="320" height="320"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -76,6 +76,7 @@
                         <outlet property="mealNameLabel" destination="nmC-37-7QC" id="Nwe-F7-eJ1"/>
                         <outlet property="nameTextField" destination="6vG-Pn-rYs" id="eSh-Yp-BPQ"/>
                         <outlet property="photoImageView" destination="Qdx-X4-gcC" id="Dte-C7-Os9"/>
+                        <outlet property="ratingControl" destination="eZ6-qF-IMv" id="xuo-7j-Ct5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

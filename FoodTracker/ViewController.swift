@@ -14,6 +14,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
+    
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     // MARK: Actions
     @IBAction func setDefaultText(sender: UIButton) {
         if nameTextField.text != nil && nameTextField.text != "" {
@@ -60,6 +63,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
        textField.resignFirstResponder()
+        nameTextField.text = ""
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {

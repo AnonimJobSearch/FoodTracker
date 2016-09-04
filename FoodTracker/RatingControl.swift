@@ -11,10 +11,14 @@ import UIKit
 class RatingControl: UIView {
     // MARK: Properties
     
-    var rating = 0
     var ratingButtons = [UIButton]()
     let spacing = 5
     let starCount = 5
+    var rating = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
     
     
     // MARK: Initialization
@@ -48,6 +52,7 @@ class RatingControl: UIView {
             buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
             button.frame = buttonFrame
         }
+         updateButtonSelectionStates()
     }
     
     override func intrinsicContentSize() -> CGSize {
@@ -59,8 +64,15 @@ class RatingControl: UIView {
     }
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
-        print("Button pressed")
+        rating = ratingButtons.indexOf(button)! + 1
+        updateButtonSelectionStates()
     }
     
+    func updateButtonSelectionStates() {
+        for(index, button) in ratingButtons.enumerate() {
+            //If the index of a button is less than the rating, that button should be selected.
+            button.selected = index < rating
+        }
+    }
     
 }
