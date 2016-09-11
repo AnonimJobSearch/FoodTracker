@@ -86,10 +86,10 @@
 		E9EFC9181D733F05006F5173 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
-				3871A18C1D815CF1002F3BC7 /* MealTableViewCell.swift */,
 				E9EFC9191D733F05006F5173 /* AppDelegate.swift */,
-				E9EFC91B1D733F05006F5173 /* MealViewController.swift */,
 				E9EFC91D1D733F05006F5173 /* Main.storyboard */,
+				3871A18C1D815CF1002F3BC7 /* MealTableViewCell.swift */,
+				E9EFC91B1D733F05006F5173 /* MealViewController.swift */,
 				3871A18A1D8159B2002F3BC7 /* MealTableViewController.swift */,
 				E9B474BC1D7DD28800ECE04B /* Meal.swift */,
 				38362B301D772FBE0036857D /* RatingControl.swift */,
