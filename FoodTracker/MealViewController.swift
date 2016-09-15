@@ -23,6 +23,12 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
      */
     var meal: Meal?
     // MARK: Navigation
+    
+    
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
@@ -31,6 +37,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             let rating = ratingControl.rating
             // Set the meal to be passed to MealTableViewController after the unwind segue.
             meal = Meal(name: name, photo: photo, rating: rating)
+            print(meal)
         }
     }
     // MARK: Actions
@@ -76,13 +83,23 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         dismissViewControllerAnimated(true, completion: nil)
     }
     // MARK: UITextFieldDelegate
+    func textFieldDidBeginEditing(textField: UITextField) {
+        // Disable the Save button while editing.
+        saveButton.enabled = false
+    }
+    func checkValidMealName() {
+        // Disable the Save button if the text field is empty.
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
        textField.resignFirstResponder()
         nameTextField.text = ""
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {
-        
+        checkValidMealName()
+        navigationItem.title = textField.text
         
     }
     
@@ -90,13 +107,14 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         nameTextField.delegate = self
+        checkValidMealName()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 
