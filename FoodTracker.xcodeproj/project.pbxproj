@@ -155,10 +155,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = pavel;
+				ORGANIZATIONNAME = pnikitinskiy;
 				TargetAttributes = {
 					E9EFC9151D733F05006F5173 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C443TBPU5A;
 					};
 					E9EFC9291D733F05006F5173 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -347,10 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.FoodTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnikitinskiy.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -358,10 +362,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.paveln.FoodTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnikitinskiy.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
